@@ -1,0 +1,27 @@
+{
+  "name": "awesome",
+  "private": true,
+  "scripts": {
+    "livereload": "livereload --exclusions node_modules/ --exts 'css,js,twig,theme,apng,avif,gif,jpg,jpeg,jfif,pjpeg,pjp,png,svg,webp'",
+    "import-scss": "import-scss",
+    "build-img": "parcel build './src/images/*' --no-source-maps --dist-dir './dist/images' --no-content-hash --no-cache",
+    "build-js": "parcel build './src/js/*.js' --dist-dir './dist/js' --no-content-hash --no-cache",
+    "build-css": "npm run import-scss; node to-dist.js; parcel build './src/style/main.scss' --dist-dir './dist/style' --no-content-hash --no-cache; node to-src.js;",
+    "build": "npm run build-img; npm run build-js; npm run build-css;"
+  },
+  "parcelIgnore": [
+    "/themes/custom/awesome/font/*",
+    "/themes/custom/awesome/dist/images/*"
+  ],
+  "browserslist": [
+    "> 0.2%, last 2 versions, not dead"
+  ],
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
+    "import-scss": "^0.1.3",
+    "livereload": "^0.9.3",
+    "parcel": "^2.11.0",
+    "parcel-resolver-ignore": "^2.2.0",
+    "replace-in-file": "^7.1.0"
+  }
+}

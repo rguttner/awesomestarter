@@ -1,0 +1,10 @@
+# Main theme library.
+global:
+  js:
+    dist/js/awesome.js: {}
+  css:
+    base:
+      vendor/css/normalize.css: {}
+      dist/style/main.css: {}
+  dependencies:
+    - core/jquery

@@ -1,0 +1,52 @@
+.main-container {
+  max-width: $large-breakpoint;
+  margin: auto;
+  padding: 1rem 5rem;
+}
+
+.container-large {
+  max-width: $large-breakpoint;
+  margin: auto;
+}
+
+.container-medium {
+  max-width: $notebook-breakpoint;
+  margin: auto;
+}
+
+.container-small {
+  max-width: $tablet-breakpoint;
+  margin: auto;
+}
+
+.container-mobile {
+  max-width: $mobile-breakpoint;
+  margin: auto;
+}
+
+.full-width-container {
+  max-width: 144rem;
+  width: 100%;
+  margin: auto;
+}
+
+@media  #{"only screen and (max-width: 1400)"}{
+  .main-container {
+    max-width: $notebook-breakpoint;
+    margin: auto;
+  }
+}
+
+@media  #{"only screen and (max-width: 1100)"}{
+  .main-container {
+    max-width: $tablet-breakpoint;
+    margin: auto;
+  }
+}
+
+@media  #{"only screen and (max-width: 800)"}{
+  .main-container {
+    max-width: $mobile-breakpoint;
+    margin: auto;
+  }
+}

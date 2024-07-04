@@ -1,0 +1,13 @@
+name: Awesome
+type: theme
+base theme: false
+description: 'AwEsOmE theme.'
+package: Custom
+core_version_requirement: ^10
+libraries:
+  - awesome/global
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'
+  no_visible: 'No visible'

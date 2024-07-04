@@ -1,0 +1,53 @@
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.toolbar .toolbar-icon::before {
+  width: 2rem;
+}
+
+.toolbar .toolbar-icon {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+@media only screen and (min-width: 36em) {
+  .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon::before {
+    width: 2rem;
+  }
+}
+
+.toolbar .toolbar-toggle-orientation button {
+  width: 3.9rem;
+  height: 3.9rem;
+}
+
+.dialog-off-canvas-main-canvas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.toolbar-horizontal, .toolbar-vertical {
+  .dialog-off-canvas-main-canvas {
+    min-height: calc(100vh - 39px);
+  }
+}
+
+.toolbar-horizontal.toolbar-tray-open {
+  .dialog-off-canvas-main-canvas {
+    min-height: calc(100vh - 79px);
+  }
+}
